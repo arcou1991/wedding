@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript">
+function Text(sName)
+{
+	document.getElementById("test").innerHTML="当前正在测试访问网页的人是:" + sName;
+
+}
+</script>
+</head>
+<body>
+<p id="test">
+	{% if oTestData.GetName() %}
+		Hello, {{oTestData.GetName()}}
+	{% else %}
+		Hello, Stranger!
+	{% endif %}
+</p>
+{% import 'macros.html' as macros %}
+<ul>
+	{% for num in oTestData.GetListNum() %}
+		{{macros.RandomNum(num)}}
+	{% endfor %}
+</ul>
+
+<button type="button" onclick="Text('{{oTestData.GetName()}}')">点击测试
+</button>
+</body>
+</html>
