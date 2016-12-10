@@ -33,15 +33,13 @@ class CTestData(object):
 		return self.m_lList
 
 
-@app.route("/user/<name>")
-def user(name):
+@app.route("/")
+def user():
 	# return "<h1>Hello %s!</h1>" % name, 400
 	# from flask import redirect
 	# return redirect("index.html")
-	if name == "caokai":
-		return template("ck.html", name=name)
-	else:
-		return template("index.html", oTestData=CTestData(name))
+	name = "caokai"
+	return template("index.html", oTestData=CTestData(name))
 
 manager = Manager(app)
 bootstrap = Bootstrap(app)
