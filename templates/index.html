@@ -9,7 +9,7 @@ function Text(sName)
 </script>
 </head>
 <body>
-<p id="test">
+<!-- <p id="test">
 	{% if oTestData.GetName() %}
 		Hello, {{oTestData.GetName()}}
 	{% else %}
@@ -23,7 +23,10 @@ function Text(sName)
 	{% endfor %}
 </ul>
 
-<button type="button" onclick="Text('{{oTestData.GetName()}}')">点击测试
+<button type="button" onclick="Text('{{oTestData.GetName()}}')">点击测试 -->
+<div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
+<img src="{{ url_for('static', filename='images/ck_mm.jpg') }}" height="100%" width="100%"/>
+</div>
 </button>
 </body>
 </html>
