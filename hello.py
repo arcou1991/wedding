@@ -4,7 +4,7 @@
 
 from flask import Flask
 from flask.ext.script import Manager
-from flask.ext.bootstrap import Bootstrap
+#from flask.ext.bootstrap import Bootstrap
 from flask import render_template as template
 
 
@@ -42,7 +42,7 @@ def user():
 	return template("index.html", oTestData=CTestData(name))
 
 manager = Manager(app)
-bootstrap = Bootstrap(app)
+#bootstrap = Bootstrap(app)
 
 if __name__ == "__main__":
 	manager.run()
